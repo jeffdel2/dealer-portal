@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  
+  .iframe-container
+      iframe(src="https://partners.login.j5demo.com/partner-portal?iss=https%3A%2F%2Fpartners.login.j5demo.com" title="Partner Portal")
+      
+  form.navbar-form.navbar-left(method="get", action="/portal")
+        button#logout-button.btn-n.btn-primary-n(type="submit") Back to Portal

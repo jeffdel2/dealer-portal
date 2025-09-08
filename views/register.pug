@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h2= "Acme Registration"
+  br
+  br
+  div.col-xs-6
+    p Fill out the following to register for access to Acme
+    
+    form(method="post", action="/submit")
+    
+      input.input-custom(type="text", name="firstname", id="firstname", placeholder="Enter your first name")
+
+      br
+      br
+    
+      input.input-custom(type="text", name="lastname", id="lastname", placeholder="Enter your last name")
+
+      br
+      br
+
+      input.input-custom(type="email", name="email", id="email", placeholder="Enter your email")
+
+      br
+      br
+      
+      button.btn.btn-primary(type='submit', value="Submit") Click here to Register
+      

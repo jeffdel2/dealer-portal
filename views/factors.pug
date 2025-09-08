@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h2= "Acme Multi Factor Authentication"
+  br
+  br
+  div.col-xs-6
+    p Use this page to review factors availble for your login
+    
+    br
+    
+    button.btn.btn-primary(type='button', onclick='callgetPhones()') Get MyAccount Phones
+  
+  h5="MyAccount Info:"
+  <pre class="rounded"><code class="json">
+  div#myAccountResult
+  </code></pre>
