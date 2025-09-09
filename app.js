@@ -65,7 +65,7 @@ axios
         userInfoURL: userinfo_endpoint,
         clientID: CLIENT_ID,
         clientSecret: CLIENT_SECRET,
-        callbackURL: 'https://nissan-partners.glitch.me/authorization-code/callback',
+        callbackURL: (process.env.APP_URL || 'http://localhost:3000') + '/authorization-code/callback',
         scope: 'profile offline_access phone groups',
         //scope: 'profile offline_access phone okta.myAccount.phone.read okta.myAccount.phone.manage okta.myAccount.email.read',
       }, (issuer, profile, context, idToken, accessToken, refreshToken, params, done) => {
