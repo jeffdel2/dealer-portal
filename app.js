@@ -205,7 +205,8 @@ app.use('/portal', ensureLoggedIn, (req, res) => {
 
 // Admin Panel Page
 app.use('/admin-panel',ensureLoggedIn , (req, res) => {
-  res.render('admin-panel', { authenticated: req.isAuthenticated(), user: req.user, isAdmin: req.isAdmin, isUser: req.isUser, });
+  const spaUrl = `${process.env.SPA_URL}`;
+  res.render('admin-panel', { authenticated: req.isAuthenticated(), user: req.user, isAdmin: req.isAdmin, isUser: req.isUser, spaUrl: spaUrl });
 });
 
 
