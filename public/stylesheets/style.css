@@ -147,9 +147,11 @@ body {
   display: inline;
   flex-direction: column;
   align-items: center;
-  background-image: url("https://i.ytimg.com/vi/k7q2fLTOnnU/maxresdefault.jpg") !important;
+  background-image: url("https://images.ctfassets.net/e6t5diu0txbw/6P1LbMlfvf99BWD99we3yH/813279aeac2039eac3c10eeab2c4b766/image.png") !important;
   background-color: rgba(164, 157, 157, 0.6) !important;
   background-blend-mode: soft-light !important;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -240,7 +242,7 @@ iframe {
 }
 
 body.portal {
-  background-image: url("https://i.ytimg.com/vi/k7q2fLTOnnU/maxresdefault.jpg");
+  background-image: url("https://images.ctfassets.net/e6t5diu0txbw/6P1LbMlfvf99BWD99we3yH/813279aeac2039eac3c10eeab2c4b766/image.png");
   background-color: rgba(164, 157, 157, 0.6);
   background-blend-mode: soft-light;
   background-repeat: no-repeat;

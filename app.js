@@ -15,7 +15,7 @@ var request = require('request');
 // Source and import environment variables
 //require('dotenv').config({ path: '.okta.env' })
 require('dotenv').config({ path: '.env' })
-const { ORG_URL, WELL_KNOWN_ENDPOINT, CLIENT_ID, CLIENT_SECRET, TOKEN_VALUE, WF_INVOKE } = process.env;
+const { ORG_URL, WELL_KNOWN_ENDPOINT, CLIENT_ID, CLIENT_SECRET, TOKEN_VALUE, WF_INVOKE, APP_URL } = process.env;
 
 var indexRouter = require('./routes/index');
 
@@ -267,11 +267,13 @@ app.post('/logout', (req, res, next) => {
     if (err) { return next(err); }
     let params = {
       id_token_hint: id_token,
-      post_logout_redirect_uri: 'https://nissan-partners.glitch.me/'
+      post_logout_redirect_uri: process.env.APP_URL
     }
     res.redirect(logout_url + '?' + qs.stringify(params));
   });
 });
+
+//post_logout_redirect_uri: 'https://nissan-partners.glitch.me/'
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
